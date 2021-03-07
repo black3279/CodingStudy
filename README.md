@@ -91,3 +91,9 @@ create-react : Velopert gitbook > 벨로퍼트와 함께하는 모던 리액트 
 https://react.vlpt.us/
  <br/>
 cf) Generator 문법, 유투브 라이브 강의 등 <br/>
+
+2021년 03월 07일
+
+[김성민 스터디] https://www.notion.so/Effective-Java-3-E-6e8c1a05ab4c4ee08ccc6096ed919608
+
+
