@@ -1,7 +1,7 @@
 # Coding_Study
 Coding Study with 2019 SDS Developers
 
-2021년 02월 20일 토요일
+## 2021/02/20
 
 [장원용 스터디] <br/>
 https://wonyong-jang.github.io/java/2021/01/04/Java-Interface.html <br/>
@@ -92,19 +92,19 @@ https://react.vlpt.us/
  <br/>
 cf) Generator 문법, 유투브 라이브 강의 등 <br/>
 
-2021년 03월 07일
+## 2021/03/07
 
 [김성민 스터디] https://www.notion.so/Effective-Java-3-E-6e8c1a05ab4c4ee08ccc6096ed919608
 1. 생성자 대신 정적 팩터리 메서드를 고려하라
 
-## 핵심 정리
+### 핵심 정리
 
 정적 팩터리 메서드와 public 생성자는 각자의 쓰임새가 있으니 상대적인 장단점을 이해하고 사용하는 것이 좋다.
 단, 정적 팩터리 메서드가 유리한 경우가 더 많으므로 무작정 public 생성자를 제공하던 습관을 고치자.
 
 2. 생성자에 매개변수가 많다면 빌더를 고려하라
 
-## 핵심 정리
+### 핵심 정리
 
 - 생성자나 정적 팩터리가 처리해야 할 매개변수가 많다면 빌더 패턴을 선택하는 게 더 낫다.
 - 매개변수 중 다수가 필수가 아니거나 같은 타입이면 특히 더 그렇다.
@@ -112,7 +112,7 @@ cf) Generator 문법, 유투브 라이브 강의 등 <br/>
 
 3. private 생성자나 열거 타입으로 싱글턴임을 보증하라
 
-## public static 멤버가 final 필드인 방식
+### public static 멤버가 final 필드인 방식
 
 private 생성자는 Cat.INSTANCE를 초기화할때 딱 한 번만 호출된다.
 
@@ -140,7 +140,7 @@ private Cat() {
 - public static 필드가 final이니 절대로 다른 객체를 참조할 수 없다. * 명백하게 API에 싱글턴임이 드러난다.
 - 간결하다.
 
-## 정적 팩터리 방식
+### 정적 팩터리 방식
 
 ```java
 public class Cat2 {
@@ -174,7 +174,7 @@ Supplier<Cat2> cat2Supplier = Cat2::getInstance;
 
 두 방식 모두 직렬화시 인스턴스 필드를 transient로 선언하고 readResolve 메소드를 제공해야 한다.
 
-## 원소가 하나뿐인 열거 타입 방식
+### 원소가 하나뿐인 열거 타입 방식
 
 ```java
 public enum Cat3 {
@@ -190,11 +190,14 @@ public enum Cat3 {
 
 단, 만들려는 싱글턴이 Enum 외의 클래스를 상속해야 한다면 사용 불가능.
 
-## 장점
+### 장점
 
 - public 필드 방식과 비슷하지만, 더 간결하고 추가 노력없이 직렬화 가능
 - 아주 복잡한 직렬화 상황이나 리플렉션 공격에도 제2의 인스턴스가 생기는 일을 완벽히 막아줌
 
-NEW > 2021년 04월 첫째주 김성민, 이경진 스터디 완료
-NOTION 정리 후 업로드 예정
+## 2021/04/03,04
+[이경진 스터디] 참고) Selenium Study & SQLP Study
+
+[김성민 스터디]
+https://www.notion.so/Effective-Java-3-E-6e8c1a05ab4c4ee08ccc6096ed919608
 
