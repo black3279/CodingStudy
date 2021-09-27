@@ -1,3 +1,3 @@
-## 20210926 ¼Û¸íÁø ÇÁ·Î
+## 20210926 ì†¡ëª…ì§„ í”„ë¡œ
 
 - https://github.com/RumbleKAT/WeekEndStudy/blob/main/reconcilation.md
