@@ -1,0 +1,31 @@
+2021/04/10
+
+- 김성태
+
+- GC : 가비지 컬렉션 
+- 자바의 경우 동적으로 메모리를 할당하는데 GC 를 활용해 메모리를 관리한다.
+- GC 의 경우, GC 쓰레드 실행 과정에서 자원이 들고 Stop-the-world 현상으로 서비스 순단이 발생할 수 있다.
+- 힙 메모리 영역에 NEW/OLD 영역 EDEN 영역 등이 있다.
+- 객체를 만들면 NEW 영역 - EDEN 영역에 생기고 POOL 이 차면 EDEN 에서 사용하는 객체들은 FROM 으로 이후 SUVIVOR 영역으로 보낸다.
+- SUVIVOR 영역도 다 차면 OLD 영역으로 간다.
+- EDEN, SUVIVOR 영역에서 일어나는 GC 를 Minor GC 라고 한다.
+- OLD 영역에서 발생하는 GC 를 FULL GC 라고 한다.
+- Stop-the-world 로 인해 Queue 가 쌓이면 서비스 부하가 생긴다.
+- OLD 영역이 작게 할당되면 NEW 에서 OLD 로 넘어갈때 OOM 가 날 수 있다.
+- 관리 옵션
+	- Xms, Xmx : Heap 메모리 초기 할당량
+	- XX NewSize : New 영역 초기 할당값
+	- etc
+- GC 모니터링 옵션을 줘서 상세정보를 출력할 수 있다.
+- OOM 발생 시, Heap 덤프를 생성하는 옵션을 줄 수 있다.
+- 힙덤프에는 Full GC 의 횟수, PSYoungGen(Young 영역) 등의 정보가 남는다.
+- before, after 내용 덤프를 통해 어느 과정에서 발생하는지 파악할 수 있다. (맨아래에는 요약남음)
+- Full GC : Young 에서 사용하는 것만 EDEN 으로 옮기고 이후 OLD 로 옮기는 과정에서 어떤 부분이 문제였는지 알 수 있다.
+- GUI 를 통한 GC 추이 분석
+	- GCeasy : 파일을 옮기거나 로우를 치면 분석해줌
+	- IBM JAVA Garbage Collector ... : GUI 그래프 등으로 GC 의 횟수 시간을 볼 수 있다.
+	- etc
+- GC 튜닝 : 튜닝이 필요한 CASE 는 Minor GC 의 처리시간이 빠르거나 주기가 빈번하지 않고, Full GC 처리시간이 빠르거나 주기가 빈번하지 않으면 고려해본다.
+- OLD 영역을 줄이면 Full GC 시간은 줄어드나 횟수가 증가하고, NEW 영역에서 넘어올때 OOM 이 발생할 수 있다.
+- OLD 영역을 늘리면 Full GC 횟수는 줄어드나 시간이 증가한다.
+- Stop-the-world 가 생겼을때 Full GC 가 1초 초과할 경우 DB timeout 설정에 따라 DB가 안붙을 수 있어 튜닝이 필요할 수 있다.
