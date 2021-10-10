@@ -1,16 +1,18 @@
-## 20211010 Àå¿ø¿ë ÇÁ·Î
+## 20211010 ìž¥ì›ìš© í”„ë¡œ
 ### Git
-- stash, working directory, staging area, local repository, remote repository ÀÇ ¿µ¿ªÀÌ ÀÖ´Ù
-- git add µî staging area¿¡ ³Ö¾îµÎ¸é git ÀÌ Æ®·¡Å· °¡´ÉÇÏ´Ù
-- Ä¿¹ÔÀ» ÇÒ °æ¿ì local repository ¿¡ µé¾î°¡°í push ¸¦ ÇÒ °æ¿ì remote repository ·Î ¹Ý¿µµÈ´Ù
-- Merge ¿¡´Â 3-way merge È¤Àº fast forward ¹æ½ÄÀ¸·Î merge µÈ´Ù
-- Ä¿¹ÔÀ» ¿Å±â´Â ¹æ½Ä Áï À§Ä¡¸¸ ¿Å±â´Â ¹æ½ÄÀ» fast forward ·Î º¸¸é µÈ´Ù
-- ¸¶½ºÅÍ·ÎºÎÅÍ ÇÇÃ³ ºê·£Ä¡°¡ ¿©·¯°³ »ý°åÀ» °æ¿ì, fast forward °¡ ºÒ°¡´ÉÇÏ°í ºê·£Ä¡º°·Î ¸ÓÁöÇÏ´Â ¹æ½ÄÀÎ 3-way merge ¸¦ ÇÏ°Ô µÈ´Ù
-- squash ( --squash ) : Squash ´Â ¿©·¯ °³ÀÇ Ä¿¹ÔÀ» ÇÏ³ª·Î ÇÕÄ¡´Â ±â´ÉÀ» ¸»ÇÏ¸ç ¸ÓÁöÇÒ ºê·£Ä¡ Ä¿¹ÔÀ» ÇÏ³ªÀÇ Ä¿¹ÔÀ¸·Î ÇÕÄ£ µÚ Å¸°Ù ºê·£Ä¡¿¡ Ä¿¹ÔÇÏ´Â ¹æ½ÄÀ¸·Î ¸ÓÁö¸¦ ÁøÇàÇÑ´Ù
-- ÀÚÀßÇÑ Ä¿¹Ô »çÇ×ÀÌ ³²Áö ¾Ê±â ¶§¹®¿¡ º¯°æ»çÇ×À» ÀÐ±â°¡ ¼ö¿ùÇØÁöÁö¸¸, ¾Æ¹«·¡µµ Á¤º¸·ÂÀÌ ¶³¾îÁú ¼ö ÀÖ´Ù
+- stash, working directory, staging area, local repository, remote repository ì˜ ì˜ì—­ì´ ìžˆë‹¤
+- git add ë“± staging areaì— ë„£ì–´ë‘ë©´ git ì´ íŠ¸ëž˜í‚¹ ê°€ëŠ¥í•˜ë‹¤
+- ì»¤ë°‹ì„ í•  ê²½ìš° local repository ì— ë“¤ì–´ê°€ê³  push ë¥¼ í•  ê²½ìš° remote repository ë¡œ ë°˜ì˜ëœë‹¤
+- Merge ì—ëŠ” 3-way merge í˜¹ì€ fast forward ë°©ì‹ìœ¼ë¡œ merge ëœë‹¤
+- ì»¤ë°‹ì„ ì˜®ê¸°ëŠ” ë°©ì‹ ì¦‰ ìœ„ì¹˜ë§Œ ì˜®ê¸°ëŠ” ë°©ì‹ì„ fast forward ë¡œ ë³´ë©´ ëœë‹¤
+- ë§ˆìŠ¤í„°ë¡œë¶€í„° í”¼ì²˜ ë¸Œëžœì¹˜ê°€ ì—¬ëŸ¬ê°œ ìƒê²¼ì„ ê²½ìš°, fast forward ê°€ ë¶ˆê°€ëŠ¥í•˜ê³  ë¸Œëžœì¹˜ë³„ë¡œ ë¨¸ì§€í•˜ëŠ” ë°©ì‹ì¸ 3-way merge ë¥¼ í•˜ê²Œ ëœë‹¤
+- squash ( --squash ) : Squash ëŠ” ì—¬ëŸ¬ ê°œì˜ ì»¤ë°‹ì„ í•˜ë‚˜ë¡œ í•©ì¹˜ëŠ” ê¸°ëŠ¥ì„ ë§í•˜ë©° ë¨¸ì§€í•  ë¸Œëžœì¹˜ ì»¤ë°‹ì„ í•˜ë‚˜ì˜ ì»¤ë°‹ìœ¼ë¡œ í•©ì¹œ ë’¤ íƒ€ê²Ÿ ë¸Œëžœì¹˜ì— ì»¤ë°‹í•˜ëŠ” ë°©ì‹ìœ¼ë¡œ ë¨¸ì§€ë¥¼ ì§„í–‰í•œë‹¤
+- ìžìž˜í•œ ì»¤ë°‹ ì‚¬í•­ì´ ë‚¨ì§€ ì•Šê¸° ë•Œë¬¸ì— ë³€ê²½ì‚¬í•­ì„ ì½ê¸°ê°€ ìˆ˜ì›”í•´ì§€ì§€ë§Œ, ì•„ë¬´ëž˜ë„ ì •ë³´ë ¥ì´ ë–¨ì–´ì§ˆ ìˆ˜ ìžˆë‹¤
 - rebase interactive
-  - Rebase ´Â ºê·£Ä¡ÀÇ °øÅë Á¶»óÀÌ µÇ´Â base ¸¦ ´Ù¸¥ ºê·£Ä¡ÀÇ Ä¿¹Ô ÁöÁ¡À¸·Î ¹Ù²Ù´Â °ÍÀÌ´Ù
-  - ¸¶Ä¡ master ¿¡¼­ ÀÏ·Ä·Î Ä¿¹ÔÀÌ ³­ °Í Ã³·³ ¿Å±â°í ½ÍÀ» °æ¿ì¿¡ rebase ¸¦ »ç¿ëÇÑ´Ù
-  - rebase ´Â °øÅëÁ¶»óÀ» ¹Ù²Û´Ù´Â ¶æÀÌ´Ù
-  - ´ÜÀÏ ºê·£Ä¡ ³»¿¡¼­ rebase ¸¦ »ç¿ëÇÏ¿© Ä¿¹Ô È÷½ºÅä¸®¸¦ ÇÕÄ¥ ¼ö ÀÖ´Ù, ÀÌ¸¦ rebase interactive ¶ó ÇÑ´Ù
-  - HEAD~3 °ú °°Àº ¸í·É¾î¸¦ ÅëÇØ Æ¯Á¤ Ä¿¹ÔµéÀ» rebase ½ÃÅ³ ¼ö ÀÖÀ¸¸ç ÀÌ °úÀú¿¡¼­ pick °ú °°Àº ¸í·É¾î¸¦ ÅëÇØ Ä¿¹ÔÀ» ÀçÁ¤·ÄÇÏ´Â µî Á¶Á¤ÀÌ °¡´ÉÇÏ´Ù
+  - Rebase ëŠ” ë¸Œëžœì¹˜ì˜ ê³µí†µ ì¡°ìƒì´ ë˜ëŠ” base ë¥¼ ë‹¤ë¥¸ ë¸Œëžœì¹˜ì˜ ì»¤ë°‹ ì§€ì ìœ¼ë¡œ ë°”ê¾¸ëŠ” ê²ƒì´ë‹¤
+  - ë§ˆì¹˜ master ì—ì„œ ì¼ë ¬ë¡œ ì»¤ë°‹ì´ ë‚œ ê²ƒ ì²˜ëŸ¼ ì˜®ê¸°ê³  ì‹¶ì„ ê²½ìš°ì— rebase ë¥¼ ì‚¬ìš©í•œë‹¤
+  - rebase ëŠ” ê³µí†µì¡°ìƒì„ ë°”ê¾¼ë‹¤ëŠ” ëœ»ì´ë‹¤
+  - ë‹¨ì¼ ë¸Œëžœì¹˜ ë‚´ì—ì„œ rebase ë¥¼ ì‚¬ìš©í•˜ì—¬ ì»¤ë°‹ ížˆìŠ¤í† ë¦¬ë¥¼ í•©ì¹  ìˆ˜ ìžˆë‹¤, ì´ë¥¼ rebase interactive ë¼ í•œë‹¤
+  - HEAD~3 ê³¼ ê°™ì€ ëª…ë ¹ì–´ë¥¼ í†µí•´ íŠ¹ì • ì»¤ë°‹ë“¤ì„ rebase ì‹œí‚¬ ìˆ˜ ìžˆìœ¼ë©° ì´ ê³¼ì €ì—ì„œ pick ê³¼ ê°™ì€ ëª…ë ¹ì–´ë¥¼ í†µí•´ ì»¤ë°‹ì„ ìž¬ì •ë ¬í•˜ëŠ” ë“± ì¡°ì •ì´ ê°€ëŠ¥í•˜ë‹¤
+
+- https://wonyong-jang.github.io/git/2021/02/05/Github-Merge.html
