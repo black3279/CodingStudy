@@ -1,3 +1,3 @@
-## 20210829 ¼Û¸íÁø ÇÁ·Î
+## 20210829 ì†¡ëª…ì§„ í”„ë¡œ
 
 - https://github.com/RumbleKAT/WeekEndStudy/blob/main/1.md
